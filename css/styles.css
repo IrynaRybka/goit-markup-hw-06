@@ -401,6 +401,51 @@ address {
 .tel-bottom:focus {
     color: var(--base-blue-color);
 }
+/* форма подписки в футере */
+.container-form-bottom {
+    margin-left: 93px;
+}
+.form-bottom {
+    display:flex;
+}
+.social-form-bottom {
+    margin-bottom: 20px;
+}
+.bottom-input-email {
+    display: inline-block;
+    
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--bk-cl-darkgray);
+    color: var(--hover-txt-btn);
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+.bottom-submit-btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    margin-left: 12px;
+    min-width: 200px;
+    max-height: 50px;
+    cursor: pointer;
+
+    background-color: var(--base-blue-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--hover-txt-btn);
+    letter-spacing: 0.06em;
+    font-weight: 700;
+};
+
+/* конец фщрмы подписки в футере */
+
 /* начало контент главной странички */
 /* шапка */
 .hat {
