@@ -787,7 +787,7 @@ address {
     transform: translate(-50%, -50%);
 
     width: 528px;
-    height: 581px;
+    min-height: 581px;
 
     background-color: var(--hover-txt-btn);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -804,10 +804,11 @@ address {
     width: 30px;
     height: 30px;
 
-    background-color: #fff;
+    background-color: var(--hover-txt-btn);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    
 
 }
 .icon-close {
@@ -815,6 +816,11 @@ address {
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button:hover .icon-close,
+.close-button:focus .icon-close {
+    fill: var(--base-blue-color);
 }
 /* форма подписки в футере */
 .container-form-bottom {
@@ -833,7 +839,8 @@ address {
     height: 50px;
     padding: 15px 16px;
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+    border: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: var(--bk-cl-darkgray);
@@ -847,8 +854,10 @@ address {
     text-align: center;
 
     margin-left: 12px;
-    min-width: 200px;
+    width: 200px;
     max-height: 50px;
+    padding-left: 29px;
+    padding-right: 28px;
     cursor: pointer;
 
     background-color: var(--base-blue-color);
@@ -857,6 +866,132 @@ address {
     color: var(--hover-txt-btn);
     letter-spacing: 0.06em;
     font-weight: 700;
-};
+}
+.icon-send-bottom {
+    margin-left: 10px;
+    fill: var(--hover-txt-btn);
 
+}
 /* конец фoрмы подписки в футере */
+
+/* форма в модалке */
+.modal-form {
+    padding: 40px;
+}
+.modal-tag {
+    margin-bottom: 12px;
+    
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--tagline-gray-cl);
+}
+.form-label {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+}
+.form-input {
+   
+    width: 448px;
+    height: 48px;
+    outline: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    border: none;
+    padding: 12px 10px 12px 42px;
+
+    transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.form-input:focus
+ {
+    outline-color: var(--base-blue-color);
+}
+.form-input:focus ~ .icon-modal { 
+    fill: var(--base-blue-color);
+    
+}
+.form-message {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    resize: none;
+    width: 448px;
+    height: 120px;
+    outline: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    border: none;
+}
+.form-message:focus {
+    outline-color: var(--base-blue-color);
+}
+.form-field {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.icon-modal  {
+    position: absolute;
+    top: 30px;
+    left: 24px;
+    transform: translate(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.agreement-document {
+    color: var(--base-blue-color);
+}
+.form-checkbox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 30px;
+    
+}
+.icon-check-custom {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    margin-right: 8px;
+    outline: 2px var(--bk-cl-darkgray) solid;
+    outline-offset: -2px;
+    border-radius: 2px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1), outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+}
+.form-checkbox-input:checked + .icon-check-custom {
+    background-color: var(--base-blue-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    outline-color: var(--base-blue-color);
+}
+.icon-checked {
+    fill: var(--hover-txt-btn);
+}
+.btn-modal-push {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    background-color: var(--base-blue-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    color: var(--hover-txt-btn);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-modal-push:hover,
+.btn-modal-push:focus {
+background-color: var(--bk-hat-blue);
+}
+
