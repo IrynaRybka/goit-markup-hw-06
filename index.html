@@ -447,7 +447,8 @@
              type="email"
              name="bottom-user-email"
              placeholder="E-mail"
-             id="bottom-user-mail">
+             id="bottom-user-mail"
+             required>
 
              <button class=" btn bottom-submit-btn" type="submit">Подписаться
               <svg class="icon-send-bottom" width="24" height="24">
@@ -517,7 +518,7 @@
             </svg>
           </div>
 
-          <div class="form-field">
+          <div class="form-field message">
             <label for="user-message" class="form-label">
             Комментарий
             </label>
@@ -529,10 +530,9 @@
             id="user-message"></textarea>
           </div>
 
-          <div class="form-checkbox">
+          <label class="form-checkbox">
             <input 
             class="visually-hidden form-checkbox-input" type="checkbox" name="user-agreement"
-            id="user-agreement"
             required>
             <span class="icon-check-custom">
               <svg class="icon-checked" width="16" height="15">
@@ -540,14 +540,14 @@
              </svg>
             </span>
             
-            <label 
+            <span 
             class="user-checkbox" for="user-agreement">Соглашаюсь с рассылкой и принимаю 
             <a class="agreement-document"
              href="#" target="_blank" rel="noreferrer noopener">Условия договора</a>
-           </label>
-          </div>
+           </span>
+          </label>
 
-          <button class="btn-modal-push" type="submit" disabled>Отправить</button>
+          <button class="btn-modal-push" type="submit">Отправить</button>
         
         </form>
       </div>
